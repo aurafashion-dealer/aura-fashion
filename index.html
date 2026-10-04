@@ -1,595 +1,2199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Aura Collection</title>
+  <title>Aura Collection</title>
+  <meta
+    name="description"
+    content="Aura Collection - Jhumkas, Nails, Jewellery & Fashion Hair Clips"
+  />
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial,sans-serif;
-    background:#fff8fb;
-    color:#333;
-}
-
-header{
-    background:linear-gradient(135deg,#f7c6d9,#d9b6f2);
-    padding:18px 7%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 3px 12px rgba(0,0,0,0.12);
-}
-
-.logo{
-    font-size:25px;
-    font-weight:bold;
-    color:#6d3157;
-}
-
-nav a{
-    text-decoration:none;
-    color:#4b2540;
-    font-weight:bold;
-    margin-left:20px;
-}
-
-nav a:hover{
-    color:#9b4d7c;
-}
-
-.hero{
-    min-height:82vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:40px 20px;
-    background:
-    linear-gradient(rgba(255,240,247,0.88),rgba(246,225,240,0.88)),
-    url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1600&q=80");
-    background-size:cover;
-    background-position:center;
-}
-
-.hero-content{
-    max-width:750px;
-}
-
-.hero h1{
-    font-size:55px;
-    color:#6d3157;
-    margin-bottom:15px;
-}
-
-.hero h2{
-    font-size:25px;
-    color:#7d5270;
-    margin-bottom:15px;
-}
-
-.hero p{
-    font-size:18px;
-    line-height:1.7;
-    margin-bottom:25px;
-}
-
-.btn{
-    display:inline-block;
-    background:#8e4d76;
-    color:white;
-    text-decoration:none;
-    padding:13px 28px;
-    border-radius:30px;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.btn:hover{
-    background:#65334f;
-    transform:translateY(-2px);
-}
-
-section{
-    padding:70px 7%;
-}
-
-.section-title{
-    text-align:center;
-    font-size:35px;
-    color:#6d3157;
-    margin-bottom:12px;
-}
-
-.section-text{
-    text-align:center;
-    max-width:700px;
-    margin:0 auto 40px;
-    color:#666;
-    line-height:1.6;
-}
-
-.categories{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:22px;
-}
-
-.category{
-    background:white;
-    padding:30px 15px;
-    text-align:center;
-    border-radius:18px;
-    box-shadow:0 5px 18px rgba(0,0,0,0.09);
-    transition:0.3s;
-}
-
-.category:hover{
-    transform:translateY(-7px);
-}
-
-.category .icon{
-    font-size:45px;
-    margin-bottom:15px;
-}
-
-.category h3{
-    color:#6d3157;
-    margin-bottom:10px;
-}
-
-.products{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
-}
-
-.product{
-    background:white;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 5px 18px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-
-.product:hover{
-    transform:translateY(-6px);
-}
-
-.product img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.product-info{
-    padding:20px;
-    text-align:center;
-}
-
-.product-info h3{
-    color:#6d3157;
-    margin-bottom:8px;
-}
-
-.price{
-    font-weight:bold;
-    color:#9b4d7c;
-    margin-bottom:15px;
-}
-
-.about{
-    background:#f8e8f1;
-    text-align:center;
-}
-
-.about-box{
-    max-width:800px;
-    margin:auto;
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 5px 18px rgba(0,0,0,0.08);
-    line-height:1.8;
-}
-
-.contact{
-    text-align:center;
-}
-
-.contact-box{
-    max-width:650px;
-    margin:auto;
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 5px 18px rgba(0,0,0,0.1);
-}
-
-.contact-box p{
-    margin:12px 0;
-    font-size:17px;
-}
-
-footer{
-    background:#54263f;
-    color:white;
-    text-align:center;
-    padding:25px 15px;
-}
-
-footer p{
-    margin:5px;
-}
-
-@media(max-width:900px){
-
-    .categories,
-    .products{
-        grid-template-columns:repeat(2,1fr);
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    header{
-        flex-direction:column;
-        gap:12px;
+    html {
+      scroll-behavior: smooth;
     }
 
-    nav a{
-        margin:0 7px;
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fffafc;
+      color: #2d2330;
+      line-height: 1.6;
     }
 
-    .hero h1{
-        font-size:42px;
-    }
-}
-
-@media(max-width:600px){
-
-    .categories,
-    .products{
-        grid-template-columns:1fr;
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
     }
 
-    .hero{
-        min-height:75vh;
+    button {
+      cursor: pointer;
     }
 
-    .hero h1{
-        font-size:36px;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    .hero h2{
-        font-size:21px;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    nav{
-        text-align:center;
-        line-height:2;
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #eee2e8;
     }
 
-    nav a{
-        font-size:14px;
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 72px;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    section{
-        padding:50px 5%;
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      color: #a83f73;
+      letter-spacing: 0.5px;
     }
-}
-</style>
+
+    .logo span {
+      color: #4b3041;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a,
+    .nav-links button {
+      background: none;
+      border: none;
+      color: #4d3a45;
+      font-weight: 700;
+      padding: 8px 4px;
+    }
+
+    .nav-links a:hover,
+    .nav-links button:hover {
+      color: #b14178;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 540px;
+      padding: 80px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        linear-gradient(rgba(255, 247, 251, 0.92), rgba(255, 247, 251, 0.92)),
+        radial-gradient(circle at top left, #f4cfe0, transparent 38%),
+        radial-gradient(circle at bottom right, #e3d0ef, transparent 40%);
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 7vw, 72px);
+      color: #9d356b;
+      margin-bottom: 18px;
+      font-weight: 900;
+    }
+
+    .hero h2 {
+      font-size: clamp(22px, 4vw, 34px);
+      margin-bottom: 15px;
+      color: #3a2933;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 28px;
+      color: #655660;
+      font-size: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 12px;
+      padding: 12px 20px;
+      font-weight: 800;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: #b14178;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #932e61;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #a63d70;
+      border: 2px solid #e8c5d6;
+    }
+
+    .btn-secondary:hover {
+      background: #fff1f7;
+    }
+
+    .btn-danger {
+      background: #b4233b;
+      color: white;
+    }
+
+    .btn-danger:hover {
+      background: #931d31;
+    }
+
+    .btn-dark {
+      background: #332731;
+      color: white;
+    }
+
+    .btn-dark:hover {
+      background: #241b22;
+    }
+
+    /* GENERAL */
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      color: #963662;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #766670;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* CATEGORY CARDS */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .category-card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid #eee0e7;
+      box-shadow: 0 8px 25px rgba(79, 35, 61, 0.08);
+      transition: 0.25s;
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 35px rgba(79, 35, 61, 0.13);
+    }
+
+    .category-image {
+      height: 235px;
+      background: #f7edf3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .category-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .category-body {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .category-body h3 {
+      margin-bottom: 8px;
+      color: #47343e;
+    }
+
+    .category-body p {
+      color: #81727a;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    /* CATALOG */
+    .catalog-section {
+      background: #fff;
+    }
+
+    .catalog-toolbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    .filter-btn {
+      border: 1px solid #e3c5d5;
+      background: white;
+      color: #8d325f;
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .filter-btn.active {
+      background: #b14178;
+      color: white;
+      border-color: #b14178;
+    }
+
+    .catalog-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .catalog-header h2 {
+      font-size: 35px;
+      color: #963662;
+    }
+
+    .catalog-header p {
+      color: #7c6e76;
+      margin-top: 5px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      background: white;
+      border: 1px solid #eee0e7;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(79, 35, 61, 0.07);
+      display: flex;
+      flex-direction: column;
+      transition: 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 260px;
+      background: #f7eef3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-content {
+      padding: 17px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .product-category {
+      font-size: 12px;
+      font-weight: 800;
+      color: #ad4779;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    .product-name {
+      font-size: 18px;
+      font-weight: 800;
+      color: #3c2d36;
+    }
+
+    .product-price {
+      font-size: 22px;
+      font-weight: 900;
+      color: #aa3c72;
+      margin-top: 3px;
+    }
+
+    .product-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 10px;
+    }
+
+    .product-actions .btn {
+      width: 100%;
+    }
+
+    .empty-state {
+      background: white;
+      border: 1px dashed #dec3d1;
+      border-radius: 16px;
+      padding: 35px;
+      text-align: center;
+      color: #776971;
+    }
+
+    /* ABOUT */
+    .about-box {
+      background: white;
+      border: 1px solid #eee0e7;
+      border-radius: 22px;
+      padding: 35px;
+      box-shadow: 0 8px 25px rgba(79, 35, 61, 0.06);
+      text-align: center;
+    }
+
+    .about-box p {
+      max-width: 850px;
+      margin: auto;
+      color: #6d5f67;
+      font-size: 17px;
+    }
+
+    /* OWNER */
+    .owner-section {
+      background: #fff7fb;
+    }
+
+    .owner-login-box,
+    .owner-panel {
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      border: 1px solid #eedce5;
+      border-radius: 22px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(79, 35, 61, 0.07);
+    }
+
+    .owner-login-box {
+      max-width: 550px;
+    }
+
+    .owner-login-box h3,
+    .owner-panel h3 {
+      color: #983766;
+      margin-bottom: 8px;
+    }
+
+    .muted {
+      color: #796b73;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-size: 14px;
+      font-weight: 800;
+      color: #4b3942;
+    }
+
+    .form-group input,
+    .form-group select {
+      border: 1px solid #ddcbd4;
+      border-radius: 10px;
+      padding: 11px 12px;
+      outline: none;
+      background: #fff;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #b14178;
+      box-shadow: 0 0 0 3px rgba(177, 65, 120, 0.09);
+    }
+
+    .image-preview {
+      width: 140px;
+      height: 140px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #f8edf3;
+      border: 1px solid #ead9e2;
+      margin-top: 4px;
+      display: none;
+    }
+
+    .image-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .owner-status {
+      padding: 12px 14px;
+      border-radius: 10px;
+      margin-bottom: 18px;
+      background: #f5f2f4;
+      color: #4b4046;
+      font-size: 14px;
+      display: none;
+    }
+
+    .admin-products {
+      margin-top: 35px;
+    }
+
+    .admin-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .admin-item {
+      border: 1px solid #eadce3;
+      border-radius: 14px;
+      padding: 12px;
+      display: grid;
+      grid-template-columns: 72px 1fr auto;
+      gap: 14px;
+      align-items: center;
+      background: #fff;
+    }
+
+    .admin-thumb {
+      width: 72px;
+      height: 72px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #f7eef3;
+    }
+
+    .admin-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .admin-info strong {
+      display: block;
+      color: #3f3038;
+    }
+
+    .admin-info span {
+      display: block;
+      color: #7a6d74;
+      font-size: 13px;
+    }
+
+    .admin-actions {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .small-btn {
+      border: none;
+      border-radius: 9px;
+      padding: 8px 11px;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .edit-btn {
+      background: #eee2f5;
+      color: #733f92;
+    }
+
+    .delete-btn {
+      background: #f8dfe4;
+      color: #a12640;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #2f232a;
+      color: #eee;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    footer h3 {
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    footer p {
+      color: #cfc3c9;
+      margin-bottom: 8px;
+    }
+
+    .footer-wa {
+      display: inline-block;
+      margin-top: 12px;
+      background: #25d366;
+      color: white;
+      padding: 11px 17px;
+      border-radius: 10px;
+      font-weight: 800;
+    }
+
+    /* MODAL */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(28, 18, 24, 0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      padding: 20px;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-box {
+      width: min(500px, 100%);
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      position: relative;
+    }
+
+    .modal-box h2 {
+      color: #963662;
+      margin-bottom: 8px;
+    }
+
+    .close-modal {
+      position: absolute;
+      right: 15px;
+      top: 12px;
+      border: none;
+      background: none;
+      font-size: 28px;
+      color: #6d5b64;
+    }
+
+    .error-message {
+      color: #b4233b;
+      font-size: 14px;
+      margin-top: 12px;
+      display: none;
+    }
+
+    .success-message {
+      color: #167044;
+      font-size: 14px;
+      margin-top: 12px;
+      display: none;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1000px) {
+      .category-grid,
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .hero {
+        min-height: 500px;
+      }
+
+      .category-grid,
+      .product-grid,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .admin-item {
+        grid-template-columns: 58px 1fr;
+      }
+
+      .admin-actions {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
+      }
+
+      .product-image {
+        height: 280px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
+  <!-- HEADER -->
+  <header>
+    <div class="navbar">
+      <a href="#home" class="logo">Aura <span>Collection</span></a>
+
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#about">About</a>
+        <button onclick="openOwnerArea()">Owner</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Aura Collection</h1>
+      <h2>Beauty • Style • Elegance</h2>
+      <p>
+        Discover beautiful jhumkas, trending nails, luxury jewellery
+        and stylish fashion hair clips — all in one place.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#categories" class="btn btn-primary">Explore Collection</a>
+
+        <a
+          class="btn btn-secondary"
+          href="https://wa.me/923155878692?text=Hello%20Aura%20Collection%2C%20I%20want%20to%20know%20more%20about%20your%20products."
+          target="_blank"
+        >
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="section" id="categories">
+    <div class="section-title">
+      <h2>Our Collections</h2>
+      <p>Choose a category and explore the products available in our catalog.</p>
+    </div>
+
+    <div class="category-grid">
+
+      <div class="category-card">
+        <div class="category-image">
+          <img
+            src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=900&q=80"
+            alt="Beautiful Jhumkas"
+          />
+        </div>
+        <div class="category-body">
+          <h3>Beautiful Jhumkas</h3>
+          <p>Elegant and colorful jhumkas for every look.</p>
+          <button class="btn btn-primary" onclick="openCatalog('jhumkas')">
+            Shop Now
+          </button>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <div class="category-image">
+          <img
+            src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=80"
+            alt="Trending Nails"
+          />
+        </div>
+        <div class="category-body">
+          <h3>Trending Nails</h3>
+          <p>Beautiful nail styles for your everyday and special looks.</p>
+          <button class="btn btn-primary" onclick="openCatalog('nails')">
+            Shop Now
+          </button>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <div class="category-image">
+          <img
+            src="https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?auto=format&fit=crop&w=900&q=80"
+            alt="Luxury Jewellery"
+          />
+        </div>
+        <div class="category-body">
+          <h3>Luxury Jewellery</h3>
+          <p>Stylish jewellery pieces to complete your outfit.</p>
+          <button class="btn btn-primary" onclick="openCatalog('jewellery')">
+            Shop Now
+          </button>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <div class="category-image">
+          <img
+            src="https://images.unsplash.com/photo-1626954079970-8868c75d6c77?auto=format&fit=crop&w=900&q=80"
+            alt="Fashion Hair Clips"
+          />
+        </div>
+        <div class="category-body">
+          <h3>Fashion Hair Clips</h3>
+          <p>Cute and trendy hair clips and claw clips.</p>
+          <button class="btn btn-primary" onclick="openCatalog('clips')">
+            Shop Now
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CATALOG -->
+  <section class="section catalog-section" id="catalog">
+
+    <div class="catalog-header">
+      <h2 id="catalogTitle">Product Catalog</h2>
+      <p id="catalogSubtitle">
+        Products added by Aura Collection will appear here automatically.
+      </p>
+    </div>
+
+    <div class="catalog-toolbar">
+      <button class="filter-btn active" onclick="openCatalog('all')" id="filter-all">
+        All
+      </button>
+
+      <button class="filter-btn" onclick="openCatalog('jhumkas')" id="filter-jhumkas">
+        Jhumkas
+      </button>
+
+      <button class="filter-btn" onclick="openCatalog('nails')" id="filter-nails">
+        Nails
+      </button>
+
+      <button class="filter-btn" onclick="openCatalog('jewellery')" id="filter-jewellery">
+        Jewellery
+      </button>
+
+      <button class="filter-btn" onclick="openCatalog('clips')" id="filter-clips">
+        Hair Clips
+      </button>
+    </div>
+
+    <div id="productGrid" class="product-grid"></div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-title">
+      <h2>About Aura Collection</h2>
+      <p>Simple, stylish and made to make your collection shine.</p>
+    </div>
+
+    <div class="about-box">
+      <p>
+        Welcome to Aura Collection — your place for beautiful jhumkas,
+        trending nails, luxury jewellery and fashionable hair accessories.
+        Browse the catalog, choose your favorite product and order directly
+        through WhatsApp.
+      </p>
+    </div>
+  </section>
+
+  <!-- OWNER SECTION -->
+  <section class="section owner-section" id="ownerSection">
+
+    <!-- LOGIN BOX -->
+    <div class="owner-login-box" id="ownerLoginBox">
+
+      <h3>👑 Owner Login</h3>
+
+      <p class="muted">
+        Login with the Owner account that you created in Firebase Authentication.
+      </p>
+
+      <form id="loginForm">
+
+        <div class="form-group">
+          <label>Email</label>
+          <input
+            type="email"
+            id="loginEmail"
+            placeholder="Enter owner email"
+            required
+          />
+        </div>
+
+        <div class="form-group" style="margin-top: 14px;">
+          <label>Password</label>
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Enter owner password"
+            required
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary"
+          style="width:100%; margin-top:18px;"
+        >
+          Login to Owner Panel
+        </button>
+
+        <div id="loginError" class="error-message"></div>
+      </form>
+
+    </div>
+
+    <!-- OWNER PANEL -->
+    <div class="owner-panel" id="ownerPanel" style="display:none;">
+
+      <div style="display:flex; justify-content:space-between; gap:15px; align-items:center; flex-wrap:wrap;">
+        <div>
+          <h3>👑 Aura Collection Owner Panel</h3>
+          <p class="muted" id="loggedInUser"></p>
+        </div>
+
+        <button class="btn btn-dark" onclick="logoutOwner()">
+          Logout
+        </button>
+      </div>
+
+      <div id="ownerStatus" class="owner-status"></div>
+
+      <form id="productForm">
+
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label>Product Name</label>
+            <input
+              type="text"
+              id="productName"
+              placeholder="e.g. Golden Pearl Jhumka"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Price (PKR)</label>
+            <input
+              type="number"
+              id="productPrice"
+              placeholder="e.g. 850"
+              min="0"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Category</label>
+            <select id="productCategory" required>
+              <option value="">Select Category</option>
+              <option value="jhumkas">Beautiful Jhumkas</option>
+              <option value="nails">Trending Nails</option>
+              <option value="jewellery">Luxury Jewellery</option>
+              <option value="clips">Fashion Hair Clips</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Product Picture</label>
+            <input
+              type="file"
+              id="productImage"
+              accept="image/*"
+            />
+          </div>
+
+          <div class="form-group full">
+
+            <label>Picture Preview</label>
+
+            <div class="image-preview" id="imagePreview">
+              <img id="previewImg" src="" alt="Preview" />
+            </div>
+
+            <small style="color:#7b6d75;">
+              Choose a clear product picture from your mobile/computer.
+            </small>
+
+          </div>
+
+        </div>
+
+        <div class="form-actions">
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            id="saveProductBtn"
+          >
+            ➕ Add Product
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-secondary"
+            id="cancelEditBtn"
+            onclick="cancelEdit()"
+            style="display:none;"
+          >
+            Cancel Edit
+          </button>
+
+        </div>
+
+        <div id="formError" class="error-message"></div>
+        <div id="formSuccess" class="success-message"></div>
+
+      </form>
+
+      <div class="admin-products">
+        <h3>Your Products</h3>
+        <p class="muted">
+          یہاں سے آپ product edit یا delete کر سکتی ہیں۔
+        </p>
+
+        <div id="adminProductList" class="admin-list"></div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- LOGIN MODAL -->
+  <div class="modal" id="loginModal">
+
+    <div class="modal-box">
+
+      <button class="close-modal" onclick="closeLoginModal()">
+        ×
+      </button>
+
+      <h2>👑 Owner Login</h2>
+
+      <p class="muted">
+        Login to manage Aura Collection products.
+      </p>
+
+      <form id="modalLoginForm">
+
+        <div class="form-group">
+          <label>Email</label>
+          <input
+            type="email"
+            id="modalEmail"
+            placeholder="Owner email"
+            required
+          />
+        </div>
+
+        <div class="form-group" style="margin-top:14px;">
+          <label>Password</label>
+          <input
+            type="password"
+            id="modalPassword"
+            placeholder="Owner password"
+            required
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary"
+          style="width:100%; margin-top:18px;"
+        >
+          Login
+        </button>
+
+        <div id="modalLoginError" class="error-message"></div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <h3>Aura Collection</h3>
+
+    <p>
+      Jhumkas • Nails • Jewellery • Hair Clips
+    </p>
+
+    <p>
+      For orders and questions, contact us on WhatsApp.
+    </p>
+
+    <a
+      class="footer-wa"
+      href="https://wa.me/923155878692?text=Hello%20Aura%20Collection%2C%20I%20want%20to%20place%20an%20order."
+      target="_blank"
+    >
+      WhatsApp: 0315 5878692
+    </a>
+
+    <p style="margin-top:18px; font-size:13px;">
+      © 2026 Aura Collection. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- FIREBASE + WEBSITE SCRIPT -->
+  <script type="module">
+
+    /* =========================================================
+       FIREBASE IMPORTS
+       ========================================================= */
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+
+    import {
+      getAuth,
+      signInWithEmailAndPassword,
+      onAuthStateChanged,
+      signOut
+    } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+
+    import {
+      getFirestore,
+      collection,
+      addDoc,
+      updateDoc,
+      deleteDoc,
+      doc,
+      onSnapshot,
+      serverTimestamp
+    } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
+
+
+    /* =========================================================
+       YOUR FIREBASE CONFIG
+       ========================================================= */
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBCLe6ybKEbdhfKPXKK_HxYjTcYUtmLAU4",
+      authDomain: "aura-collection-ac796.firebaseapp.com",
+      projectId: "aura-collection-ac796",
+      storageBucket: "aura-collection-ac796.firebasestorage.app",
+      messagingSenderId: "1055328461566",
+      appId: "1:1055328461566:web:8d8732b4cbe47b97677baf",
+      measurementId: "G-REDQ5JQ1RB"
+    };
 
-<div class="logo">✨ Aura Collection</div>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#categories">Categories</a>
-<a href="#products">Products</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
+    /* =========================================================
+       FIREBASE INITIALIZE
+       ========================================================= */
 
-</header>
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
 
 
-<section class="hero" id="home">
+    /* =========================================================
+       BASIC SETTINGS
+       ========================================================= */
+
+    const WHATSAPP_NUMBER = "923155878692";
+
+    let products = [];
+    let currentCategory = "all";
+    let editingProductId = null;
 
-<div class="hero-content">
+    // Current image while adding/editing.
+    let currentImageData = "";
 
-<h1>Aura Collection</h1>
 
-<h2>Jewellery • Nails • Accessories</h2>
+    /* =========================================================
+       CATEGORY NAMES
+       ========================================================= */
 
-<p>
-Discover beautiful and trendy fashion pieces designed
-to add elegance, style and a unique aura to your look.
-</p>
+    const categoryNames = {
+      jhumkas: "Beautiful Jhumkas",
+      nails: "Trending Nails",
+      jewellery: "Luxury Jewellery",
+      clips: "Fashion Hair Clips"
+    };
 
-<a href="#categories" class="btn">
-Explore Collection
-</a>
 
-</div>
+    /* =========================================================
+       ELEMENTS
+       ========================================================= */
 
-</section>
+    const productGrid = document.getElementById("productGrid");
+    const adminProductList = document.getElementById("adminProductList");
 
+    const ownerLoginBox = document.getElementById("ownerLoginBox");
+    const ownerPanel = document.getElementById("ownerPanel");
 
-<section id="categories">
+    const loginForm = document.getElementById("loginForm");
+    const modalLoginForm = document.getElementById("modalLoginForm");
 
-<h2 class="section-title">
-Our Categories
-</h2>
+    const productForm = document.getElementById("productForm");
 
-<p class="section-text">
-Explore our beautiful collection of trendy fashion products.
-</p>
+    const productImage = document.getElementById("productImage");
+    const imagePreview = document.getElementById("imagePreview");
+    const previewImg = document.getElementById("previewImg");
 
+    const formError = document.getElementById("formError");
+    const formSuccess = document.getElementById("formSuccess");
+    const ownerStatus = document.getElementById("ownerStatus");
 
-<div class="categories">
+    const saveProductBtn = document.getElementById("saveProductBtn");
+    const cancelEditBtn = document.getElementById("cancelEditBtn");
 
-<div class="category">
 
-<div class="icon">💎</div>
+    /* =========================================================
+       UTILITY FUNCTIONS
+       ========================================================= */
 
-<h3>Jhumkas</h3>
+    function escapeHtml(value) {
 
-<p>
-Beautiful and colorful jhumkas for women.
-</p>
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
 
-</div>
+    }
 
 
-<div class="category">
+    function formatPrice(price) {
 
-<div class="icon">💅</div>
+      const number = Number(price || 0);
 
-<h3>Nails</h3>
+      return new Intl.NumberFormat("en-PK").format(number);
 
-<p>
-Beautiful and trendy nail designs.
-</p>
+    }
 
-</div>
 
+    function getWhatsAppLink(product) {
 
-<div class="category">
+      const message =
+        `Hello Aura Collection, I want to order "${product.name}" for Rs. ${product.price}.`;
 
-<div class="icon">💍</div>
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
-<h3>Jewellery</h3>
+    }
 
-<p>
-Elegant jewellery pieces for special moments.
-</p>
 
-</div>
+    function showStatus(message, type = "info") {
 
+      ownerStatus.style.display = "block";
+      ownerStatus.textContent = message;
 
-<div class="category">
+      if (type === "error") {
+        ownerStatus.style.background = "#fbe5e9";
+        ownerStatus.style.color = "#a12640";
+      } else if (type === "success") {
+        ownerStatus.style.background = "#e2f6eb";
+        ownerStatus.style.color = "#166b42";
+      } else {
+        ownerStatus.style.background = "#f5f2f4";
+        ownerStatus.style.color = "#4b4046";
+      }
 
-<div class="icon">🎀</div>
+    }
 
-<h3>Fashion Accessories</h3>
 
-<p>
-Cute hair clips and accessories to complete your style.
-</p>
+    function showFormError(message) {
 
-</div>
+      formError.textContent = message;
+      formError.style.display = "block";
 
-</div>
+      formSuccess.style.display = "none";
 
-</section>
+    }
 
 
-<section id="products">
+    function showFormSuccess(message) {
 
-<h2 class="section-title">
-Featured Collection
-</h2>
+      formSuccess.textContent = message;
+      formSuccess.style.display = "block";
 
-<p class="section-text">
-Take a look at some of our featured fashion items.
-</p>
+      formError.style.display = "none";
 
+    }
 
-<div class="products">
 
+    function clearFormMessages() {
 
-<!-- JHUMKAS -->
+      formError.style.display = "none";
+      formSuccess.style.display = "none";
 
-<div class="product">
+    }
 
-<img
-src="https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=800&q=80"
-alt="Colorful Women's Jhumkas">
 
-<div class="product-info">
+    /* =========================================================
+       IMAGE COMPRESSION
+       ========================================================= */
 
-<h3>Beautiful Jhumkas</h3>
+    function compressImage(file) {
 
-<p class="price">
-Colorful Women's Collection
-</p>
+      return new Promise((resolve, reject) => {
 
-<a href="#contact" class="btn">
-Shop Now
-</a>
+        if (!file) {
+          reject(new Error("No image selected."));
+          return;
+        }
 
-</div>
+        if (!file.type.startsWith("image/")) {
+          reject(new Error("Please choose an image file."));
+          return;
+        }
 
-</div>
+        const reader = new FileReader();
 
+        reader.onload = function(event) {
 
-<!-- TRENDING NAILS -->
+          const img = new Image();
 
-<div class="product">
+          img.onload = function() {
 
-<img
-src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80"
-alt="Trendy Nails">
+            const maxSize = 700;
 
-<div class="product-info">
+            let width = img.width;
+            let height = img.height;
 
-<h3>Trendy Nails</h3>
+            if (width > height && width > maxSize) {
+              height = Math.round((height * maxSize) / width);
+              width = maxSize;
+            }
 
-<p class="price">
-Latest Designs
-</p>
+            if (height >= width && height > maxSize) {
+              width = Math.round((width * maxSize) / height);
+              height = maxSize;
+            }
 
-<a href="#contact" class="btn">
-Shop Now
-</a>
+            const canvas = document.createElement("canvas");
 
-</div>
+            canvas.width = width;
+            canvas.height = height;
 
-</div>
+            const ctx = canvas.getContext("2d");
 
+            ctx.drawImage(img, 0, 0, width, height);
 
-<!-- JEWELLERY -->
+            const compressedData = canvas.toDataURL(
+              "image/jpeg",
+              0.72
+            );
 
-<div class="product">
+            /*
+              Images are saved as compressed data inside Firestore
+              so this version can work without Firebase Storage.
+            */
 
-<img
-src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80"
-alt="Luxury Jewellery">
+            if (compressedData.length > 750000) {
 
-<div class="product-info">
+              reject(
+                new Error(
+                  "یہ picture بہت بڑی ہے۔ براہِ کرم چھوٹی/کم quality picture منتخب کریں۔"
+                )
+              );
 
-<h3>Luxury Jewellery</h3>
+              return;
+            }
 
-<p class="price">
-Elegant Collection
-</p>
+            resolve(compressedData);
 
-<a href="#contact" class="btn">
-Shop Now
-</a>
+          };
 
-</div>
+          img.onerror = function() {
+            reject(new Error("Image load failed."));
+          };
 
-</div>
+          img.src = event.target.result;
 
+        };
 
-<!-- HAIR CLIPS -->
+        reader.onerror = function() {
+          reject(new Error("Could not read image."));
+        };
 
-<div class="product">
+        reader.readAsDataURL(file);
 
-<img
-src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=80"
-alt="Beautiful Hair Clip">
+      });
 
-<div class="product-info">
+    }
 
-<h3>Fashion Hair Clips</h3>
 
-<p class="price">
-Cute & Trendy Accessories
-</p>
+    /* =========================================================
+       IMAGE PREVIEW
+       ========================================================= */
 
-<a href="#contact" class="btn">
-Shop Now
-</a>
+    productImage.addEventListener("change", async function() {
 
-</div>
+      const file = productImage.files[0];
 
-</div>
+      if (!file) {
+        return;
+      }
 
+      clearFormMessages();
 
-</div>
+      try {
 
-</section>
+        const compressed = await compressImage(file);
 
+        currentImageData = compressed;
 
-<section class="about" id="about">
+        previewImg.src = compressed;
+        imagePreview.style.display = "block";
 
-<h2 class="section-title">
-About Aura Collection
-</h2>
+      } catch (error) {
 
-<div class="about-box">
+        currentImageData = "";
 
-<p>
-Welcome to <strong>Aura Collection</strong>!
+        imagePreview.style.display = "none";
 
-Our goal is to bring you beautiful, stylish and trendy
-jewellery, nails and fashion accessories.
+        showFormError(error.message);
 
-We believe that small details can make your whole look special.
-</p>
+      }
 
-</div>
+    });
 
-</section>
 
+    /* =========================================================
+       AUTHENTICATION STATE
+       ========================================================= */
 
-<section class="contact" id="contact">
+    onAuthStateChanged(auth, function(user) {
 
-<h2 class="section-title">
-Contact Us
-</h2>
+      if (user) {
 
-<p class="section-text">
-Interested in our collection? Get in touch with us on WhatsApp.
-</p>
+        ownerLoginBox.style.display = "none";
+        ownerPanel.style.display = "block";
 
+        document.getElementById("loggedInUser").textContent =
+          `Logged in as: ${user.email}`;
 
-<div class="contact-box">
+        showStatus(
+          "Owner login successful. آپ products manage کر سکتی ہیں۔",
+          "success"
+        );
 
-<p>
-💬 Contact us directly on WhatsApp
-</p>
+      } else {
 
-<br>
+        ownerLoginBox.style.display = "block";
+        ownerPanel.style.display = "none";
 
-<a
-href="https://wa.me/923155878692?text=Hello%20Aura%20Collection%2C%20I%20want%20to%20ask%20about%20your%20products."
-class="btn"
-target="_blank">
+      }
 
-💬 Contact Now
+    });
 
-</a>
 
-</div>
+    /* =========================================================
+       LOGIN FORM
+       ========================================================= */
 
-</section>
+    async function handleLogin(email, password, errorElement) {
 
+      errorElement.style.display = "none";
 
-<footer>
+      try {
 
-<p>
-✨ Aura Collection
-</p>
+        await signInWithEmailAndPassword(
+          auth,
+          email,
+          password
+        );
 
-<p>
-Jewellery • Nails • Accessories
-</p>
+        closeLoginModal();
 
-<p>
-© 2026 Aura Collection. All Rights Reserved.
-</p>
+      } catch (error) {
 
-</footer>
+        console.error(error);
+
+        let message = "Login failed. Email یا password check کریں۔";
+
+        if (error.code === "auth/invalid-credential") {
+          message = "Email یا password غلط ہے۔";
+        }
+
+        if (error.code === "auth/too-many-requests") {
+          message = "کئی بار غلط کوشش ہوئی ہے۔ تھوڑی دیر بعد دوبارہ کوشش کریں۔";
+        }
+
+        errorElement.textContent = message;
+        errorElement.style.display = "block";
+
+      }
+
+    }
+
+
+    loginForm.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      const email =
+        document.getElementById("loginEmail").value.trim();
+
+      const password =
+        document.getElementById("loginPassword").value;
+
+      handleLogin(
+        email,
+        password,
+        document.getElementById("loginError")
+      );
+
+    });
+
+
+    modalLoginForm.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      const email =
+        document.getElementById("modalEmail").value.trim();
+
+      const password =
+        document.getElementById("modalPassword").value;
+
+      handleLogin(
+        email,
+        password,
+        document.getElementById("modalLoginError")
+      );
+
+    });
+
+
+    /* =========================================================
+       LOGOUT
+       ========================================================= */
+
+    window.logoutOwner = async function() {
+
+      try {
+
+        await signOut(auth);
+
+        productForm.reset();
+
+        cancelEdit();
+
+        showStatus("آپ logout ہو گئی ہیں۔");
+
+        document
+          .getElementById("ownerSection")
+          .scrollIntoView({
+            behavior: "smooth"
+          });
+
+      } catch (error) {
+
+        console.error(error);
+
+      }
+
+    };
+
+
+    /* =========================================================
+       OPEN OWNER AREA
+       ========================================================= */
+
+    window.openOwnerArea = function() {
+
+      document
+        .getElementById("ownerSection")
+        .scrollIntoView({
+          behavior: "smooth"
+        });
+
+    };
+
+
+    /* =========================================================
+       LOGIN MODAL
+       ========================================================= */
+
+    window.openLoginModal = function() {
+
+      document
+        .getElementById("loginModal")
+        .classList.add("active");
+
+    };
+
+
+    window.closeLoginModal = function() {
+
+      document
+        .getElementById("loginModal")
+        .classList.remove("active");
+
+    };
+
+
+    /* =========================================================
+       LOAD PRODUCTS FROM FIRESTORE
+       ========================================================= */
+
+    onSnapshot(
+      collection(db, "products"),
+      function(snapshot) {
+
+        products = snapshot.docs.map(function(documentSnapshot) {
+
+          return {
+            id: documentSnapshot.id,
+            ...documentSnapshot.data()
+          };
+
+        });
+
+        products.sort(function(a, b) {
+
+          const timeA =
+            a.createdAt && a.createdAt.toMillis
+              ? a.createdAt.toMillis()
+              : 0;
+
+          const timeB =
+            b.createdAt && b.createdAt.toMillis
+              ? b.createdAt.toMillis()
+              : 0;
+
+          return timeB - timeA;
+
+        });
+
+        renderProducts();
+
+        renderAdminProducts();
+
+      },
+      function(error) {
+
+        console.error("Firestore error:", error);
+
+        productGrid.innerHTML = `
+          <div class="empty-state" style="grid-column:1/-1;">
+            Products load نہیں ہو سکے۔
+            Firebase Rules اور connection check کریں۔
+          </div>
+        `;
+
+      }
+    );
+
+
+    /* =========================================================
+       RENDER PRODUCTS
+       ========================================================= */
+
+    function renderProducts() {
+
+      let visibleProducts = products;
+
+      if (currentCategory !== "all") {
+
+        visibleProducts = products.filter(function(product) {
+
+          return product.category === currentCategory;
+
+        });
+
+      }
+
+      document.getElementById("catalogTitle").textContent =
+        currentCategory === "all"
+          ? "Product Catalog"
+          : categoryNames[currentCategory];
+
+      document.getElementById("catalogSubtitle").textContent =
+        currentCategory === "all"
+          ? "Choose any product and order directly through WhatsApp."
+          : `Explore our ${categoryNames[currentCategory]} collection.`;
+
+      updateFilterButtons();
+
+      if (!visibleProducts.length) {
+
+        productGrid.innerHTML = `
+          <div class="empty-state" style="grid-column:1/-1;">
+            <h3>No products available yet.</h3>
+            <p style="margin-top:6px;">
+              Owner Panel سے اس category میں product add کریں۔
+            </p>
+          </div>
+        `;
+
+        return;
+
+      }
+
+      productGrid.innerHTML = visibleProducts.map(function(product) {
+
+        const safeName = escapeHtml(product.name);
+        const safeCategory =
+          escapeHtml(categoryNames[product.category] || product.category || "");
+
+        const image =
+          product.imageUrl
+            ? product.imageUrl
+            : "https://via.placeholder.com/700x700?text=Aura+Collection";
+
+        return `
+          <div class="product-card">
+
+            <div class="product-image">
+              <img
+                src="${image}"
+                alt="${safeName}"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="product-content">
+
+              <div class="product-category">
+                ${safeCategory}
+              </div>
+
+              <div class="product-name">
+                ${safeName}
+              </div>
+
+              <div class="product-price">
+                Rs. ${formatPrice(product.price)}
+              </div>
+
+              <div class="product-actions">
+
+                <a
+                  class="btn btn-primary"
+                  href="${getWhatsAppLink(product)}"
+                  target="_blank"
+                >
+                  Order Now
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+        `;
+
+      }).join("");
+
+    }
+
+
+    /* =========================================================
+       CATEGORY FILTER
+       ========================================================= */
+
+    window.openCatalog = function(category) {
+
+      currentCategory = category;
+
+      renderProducts();
+
+      document
+        .getElementById("catalog")
+        .scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+    };
+
+
+    function updateFilterButtons() {
+
+      document
+        .querySelectorAll(".filter-btn")
+        .forEach(function(button) {
+          button.classList.remove("active");
+        });
+
+      const activeButton =
+        document.getElementById(`filter-${currentCategory}`);
+
+      if (activeButton) {
+        activeButton.classList.add("active");
+      }
+
+    }
+
+
+    /* =========================================================
+       ADD / UPDATE PRODUCT
+       ========================================================= */
+
+    productForm.addEventListener("submit", async function(event) {
+
+      event.preventDefault();
+
+      clearFormMessages();
+
+      if (!auth.currentUser) {
+
+        showFormError("پہلے Owner Login کریں۔");
+
+        return;
+
+      }
+
+      const name =
+        document.getElementById("productName").value.trim();
+
+      const price =
+        Number(document.getElementById("productPrice").value);
+
+      const category =
+        document.getElementById("productCategory").value;
+
+      if (!name) {
+        showFormError("Product name لکھیں۔");
+        return;
+      }
+
+      if (!category) {
+        showFormError("Category select کریں۔");
+        return;
+      }
+
+      if (!Number.isFinite(price) || price < 0) {
+        showFormError("صحیح price لکھیں۔");
+        return;
+      }
+
+      if (!editingProductId && !currentImageData) {
+
+        showFormError("Product کی picture select کریں۔");
+
+        return;
+
+      }
+
+      saveProductBtn.disabled = true;
+
+      saveProductBtn.textContent =
+        editingProductId
+          ? "Updating..."
+          : "Adding...";
+
+      try {
+
+        const productData = {
+          name: name,
+          price: price,
+          category: category,
+          imageUrl: currentImageData || "",
+          updatedAt: serverTimestamp()
+        };
+
+
+        if (editingProductId) {
+
+          await updateDoc(
+            doc(db, "products", editingProductId),
+            productData
+          );
+
+          showFormSuccess(
+            "Product successfully updated۔ ✅"
+          );
+
+        } else {
+
+          await addDoc(
+            collection(db, "products"),
+            {
+              ...productData,
+              createdAt: serverTimestamp()
+            }
+          );
+
+          showFormSuccess(
+            "New product successfully added۔ ✅"
+          );
+
+        }
+
+
+        resetProductForm();
+
+      } catch (error) {
+
+        console.error(error);
+
+        if (error.code === "permission-denied") {
+
+          showFormError(
+            "Permission denied۔ Firebase Rules میں Owner email check کریں۔"
+          );
+
+        } else {
+
+          showFormError(
+            "Product save نہیں ہو سکا۔ دوبارہ کوشش کریں۔"
+          );
+
+        }
+
+      } finally {
+
+        saveProductBtn.disabled = false;
+
+        saveProductBtn.textContent =
+          editingProductId
+            ? "Update Product"
+            : "➕ Add Product";
+
+      }
+
+    });
+
+
+    /* =========================================================
+       EDIT PRODUCT
+       ========================================================= */
+
+    window.editProduct = function(productId) {
+
+      const product =
+        products.find(function(item) {
+          return item.id === productId;
+        });
+
+      if (!product) {
+        return;
+      }
+
+      editingProductId = productId;
+
+      document.getElementById("productName").value =
+        product.name || "";
+
+      document.getElementById("productPrice").value =
+        product.price ?? "";
+
+      document.getElementById("productCategory").value =
+        product.category || "";
+
+      currentImageData =
+        product.imageUrl || "";
+
+      if (currentImageData) {
+
+        previewImg.src = currentImageData;
+
+        imagePreview.style.display = "block";
+
+      } else {
+
+        imagePreview.style.display = "none";
+
+      }
+
+      saveProductBtn.textContent = "Update Product";
+
+      cancelEditBtn.style.display = "inline-flex";
+
+      clearFormMessages();
+
+      document
+        .getElementById("ownerSection")
+        .scrollIntoView({
+          behavior: "smooth"
+        });
+
+    };
+
+
+    /* =========================================================
+       DELETE PRODUCT
+       ========================================================= */
+
+    window.deleteProduct = async function(productId) {
+
+      const product =
+        products.find(function(item) {
+          return item.id === productId;
+        });
+
+      if (!product) {
+        return;
+      }
+
+      const confirmed =
+        confirm(
+          `کیا آپ "${product.name}" کو delete کرنا چاہتی ہیں؟`
+        );
+
+      if (!confirmed) {
+        return;
+      }
+
+      try {
+
+        await deleteDoc(
+          doc(db, "products", productId)
+        );
+
+        showStatus(
+          "Product delete ہو گیا۔ ✅",
+          "success"
+        );
+
+      } catch (error) {
+
+        console.error(error);
+
+        showStatus(
+          "Product delete نہیں ہو سکا۔ Firebase Rules check کریں۔",
+          "error"
+        );
+
+      }
+
+    };
+
+
+    /* =========================================================
+       CANCEL EDIT
+       ========================================================= */
+
+    window.cancelEdit = function() {
+
+      editingProductId = null;
+
+      resetProductForm();
+
+    };
+
+
+    function resetProductForm() {
+
+      productForm.reset();
+
+      editingProductId = null;
+
+      currentImageData = "";
+
+      imagePreview.style.display = "none";
+
+      previewImg.src = "";
+
+      cancelEditBtn.style.display = "none";
+
+      saveProductBtn.textContent = "➕ Add Product";
+
+    }
+
+
+    /* =========================================================
+       ADMIN PRODUCT LIST
+       ========================================================= */
+
+    function renderAdminProducts() {
+
+      if (!adminProductList) {
+        return;
+      }
+
+      if (!products.length) {
+
+        adminProductList.innerHTML = `
+          <div class="empty-state">
+            ابھی کوئی product add نہیں ہوا۔
+          </div>
+        `;
+
+        return;
+
+      }
+
+      adminProductList.innerHTML =
+        products.map(function(product) {
+
+          const image =
+            product.imageUrl
+              ? product.imageUrl
+              : "https://via.placeholder.com/150?text=No+Image";
+
+          const safeName =
+            escapeHtml(product.name);
+
+          const safeCategory =
+            escapeHtml(
+              categoryNames[product.category]
+                || product.category
+                || ""
+            );
+
+          return `
+            <div class="admin-item">
+
+              <div class="admin-thumb">
+                <img
+                  src="${image}"
+                  alt="${safeName}"
+                />
+              </div>
+
+              <div class="admin-info">
+                <strong>${safeName}</strong>
+                <span>${safeCategory}</span>
+                <span>Rs. ${formatPrice(product.price)}</span>
+              </div>
+
+              <div class="admin-actions">
+
+                <button
+                  class="small-btn edit-btn"
+                  onclick="editProduct('${product.id}')"
+                >
+                  Edit
+                </button>
+
+                <button
+                  class="small-btn delete-btn"
+                  onclick="deleteProduct('${product.id}')"
+                >
+                  Delete
+                </button>
+
+              </div>
+
+            </div>
+          `;
+
+        }).join("");
+
+    }
+
+
+    /* =========================================================
+       CLOSE MODAL BY CLICKING OUTSIDE
+       ========================================================= */
+
+    document
+      .getElementById("loginModal")
+      .addEventListener("click", function(event) {
+
+        if (event.target === this) {
+          closeLoginModal();
+        }
+
+      });
+
+
+    /* =========================================================
+       START ON ALL PRODUCTS
+       ========================================================= */
+
+    renderProducts();
+
+  </script>
 
 </body>
 </html>
-
-
-
-
